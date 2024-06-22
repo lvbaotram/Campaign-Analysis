@@ -1,0 +1,38 @@
+/* Background color */
+body {
+    background-color: #F3E5F5; /* Light pastel purple */
+    color: #4A148C; /* Darker purple for text */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+h1 {
+    color: #4A148C;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Input field labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #4A148C;
+}
+
+/* Button styling */
+.stButton button {
+    background-color: #6A1B9A; /* Dark purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.stButton button:hover {
+    background-color: #8E24AA; /* Lighter dark purple */
+}
