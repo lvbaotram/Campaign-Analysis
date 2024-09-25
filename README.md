@@ -1159,5 +1159,7 @@ This is the version after data cleansing:
 <p>2240 rows × 31 columns</p>
 
 # DATA ANALYSIS: DEMOGRAPHY
+Next, let’s take a look at each demographical analysis. Let’s take a look into it by analyzing proportion of population per demography, proportion per demography per campaign, participation rates per demography, and interest of participation per campaign.
+
 # DATA ANALYSIS: CAMPAIGN TOOLS
 # CONCLUSION AND RECOMMENDATION
