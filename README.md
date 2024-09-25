@@ -762,7 +762,7 @@ Although the dataframe is now cleaned from null values, we cannot be certain tha
  ![image](https://github.com/user-attachments/assets/b038bef7-44f9-4052-917b-10bd9a8d156d)
 
 And because the number of "-1" values in this column is too high compared to the total number of rows, combined with the fact that when comparing correlation heatmaps, this column does not show strong correlations with any other columns. Therefore, I have decided to drop this column.
-### Outliers removing
+### 4. Outliers removing
 In outlier processing, there are typically two main approaches: the **Interquartile Range (IQR) method** and the **3-sigma method**. Each method offers a distinct approach to identifying and handling outliers within a dataset. 
 Here, I will use the 3-sigma method.
 
@@ -1158,7 +1158,6 @@ This is the version after data cleansing:
 </table>
 <p>2240 rows × 31 columns</p>
 
-## Glossary
 # DATA ANALYSIS: DEMOGRAPHY
 # DATA ANALYSIS: CAMPAIGN TOOLS
 # CONCLUSION AND RECOMMENDATION
