@@ -10,6 +10,9 @@ PW Mart feel that their campaign is running on auto-pilot. The participant seems
 Supermarket Campaign Team, the one in Marketing Division of PW Mart, they hire a Data Analyst to help them analyze the data they already gather for the last 2 years and design the base of their next campaign.
 # PROBLEM
 Let’s see what might be our problem first based on the given data.
+![q1](https://github.com/user-attachments/assets/70bad66d-fc64-49fb-90ac-14b534dde1b2)
+
+As you can see, the campaign participation is so low. only 1 out of 5 people has participated, more over the participation rate is only 1.2x, which means most of the participant only participated 1 time during the 4 campaign. If you look at participation per campaign, it’s only 1 out of 13 people participated in each campaign.
 # OBJECTIVE
 To best formulate next campaign, we should should evaluate our campaign performance and compared to our data as general. By then, we might conclude and answer these key questions that shape a campaign:
 
