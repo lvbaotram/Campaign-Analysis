@@ -1164,5 +1164,99 @@ This is the version after data cleansing:
 # DATA ANALYSIS: DEMOGRAPHY
 Next, let’s take a look at each demographical analysis. Let’s take a look into it by analyzing proportion of population per demography, proportion per demography per campaign, participation rates per demography, and interest of participation per campaign.
 
+![q2](https://github.com/user-attachments/assets/9edb64dd-0892-43f1-bc03-8dfef31c3a1d)
+
+![Q3](https://github.com/user-attachments/assets/4189e3bd-4323-43e2-b047-53b8244687b4)
+
+![q4](https://github.com/user-attachments/assets/ac319d94-5e9f-4f80-b96c-a96c715dc83a)
+
+![q10](https://github.com/user-attachments/assets/2526caef-69ef-452f-8bf0-e276b21b2887)
+
+![q11](https://github.com/user-attachments/assets/b9e2eb16-968f-4f72-b088-ef387e77e616)
+
+From graphs above, we can see that participation per campaign takes interest in some demographic class (right top graph).
+
+Campaign was more focused on:
+
+Generation: Gen X
+Education: PhD
+Marital: Married
+Economic Class: Lower Middle Class
+Family: Not Family
+We can also see which class has higher population per demography as listed below.
+
+Highest Population:
+
+Millennials (89.2%)
+Graduation (50.4%)
+Married (38.6%) and Together (25.9%) = (64.5%)
+Lower Middle Class (74.9%)
+Family (71.6%)
+
+## DEMOGRAPHY CORRELATION TEST
+```
+dictComb = {'combination' : [],
+            'countN' : []}
+
+for i in df['Generation'].unique() :
+    for k in df['Academic_Level'].unique() :
+        for m in df['Status'].unique() :
+            for n in df['ecoClass'].unique() :
+                for o in df['isChildren'].unique() :
+                    countN = df[(df['Generation'] == i)
+                                    & (df['Academic_Level'] == k)
+                                    & (df['Status'] == m)
+                                    & (df['ecoClass'] == n)
+                                    & (df['isChildren'] == o)]['ID'].count()
+                    for p in dictComb :
+                        if p == 'combination' :
+                            dictComb[p].append([i , k , m , n , o])
+                        else :
+                            dictComb[p].append(countN)
+
+dfComb = pd.DataFrame(dictComb)
+dfComb.sort_values('countN', ascending=False)
+```
+![image](https://github.com/user-attachments/assets/8cbfe2c2-de91-4f3e-a684-accd1eb4b03b)
+
+
+**If we get all the highest demographics combined, we only get 198 People at max**
+
+So, it better to make hierarchy or priority which Demography we should focus on more.
+
+But, still the higest demography combined match the result from analysis per demography.
+
+The priority should follow:
+
+1. Millennials (89.2%)
+2. Graduation (50.4%)
+3. Married (38.6%) and Together (25.9%) = (64.5%)
+4. Lower Middle Class (74.9%)
+5. Family (71.6%)
+
+We can see in the right-side graph, that if the population is higher, the participant is also higher. It means we should target higher population to get more participant for 6th campaign. But if we try to calculate sample based on all highest class per demography combined, we only get **198 people at max**. It means the demography class should not be treated equal, but with priority.
 # DATA ANALYSIS: CAMPAIGN TOOLS
+We should take a look at other matrix to help enhance the campaign, we can analyze discount and channel as tools to help boosting the campaign performance.
+## DISCOUNT ANALYSIS
+![Q12](https://github.com/user-attachments/assets/ff5492eb-d505-4577-8974-eed50a549ec4)
+
+From graphs above we can conclude that almost everyone has ever bought in discount but the rate of purchase is quite small, only 1 out of 6 purchases. Discount is a good tool to attract participants but should meet needs of top demography.
+## CHANNEL OF PURCHASE
+From graphs above we can conclude that almost everyone has bought from Store and Web. All favored Store as main channel of purchase. Store is the best channel of purchase followed by Web.
+
+
 # CONCLUSION AND RECOMMENDATION
+We already know which demography classes is the best for audience targeting and how the last 6 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
+
+Aim for higher population. (based on correlation test).
+
+By making audience priority:
+
+Lower Middle Class (75%)
+Family (72%)
+Couple — Married (39%) and Together (26%) = (65%)
+Graduation (50%)
+Gen X (48%)
+Integrates discount to campaign with items that meet the needs of top demography.
+
+Boost campaign in Store. If budget is good, also boost on Web.
