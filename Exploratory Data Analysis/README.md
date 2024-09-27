@@ -22,6 +22,8 @@ Next, let’s take a look at each demographical analysis. Let’s take a look in
 
 ![q11](https://github.com/user-attachments/assets/b9e2eb16-968f-4f72-b088-ef387e77e616)
 
+![QQ](https://github.com/user-attachments/assets/6835f5ff-dc42-446f-90aa-cb3a010833f6)
+
 From graphs above, we can see that participation per campaign takes interest in some demographic class (right top graph).
 
 Campaign was more focused on:
