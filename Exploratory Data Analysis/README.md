@@ -22,25 +22,25 @@ Next, let’s take a look at each demographical analysis. Let’s take a look in
 
 ![q11](https://github.com/user-attachments/assets/b9e2eb16-968f-4f72-b088-ef387e77e616)
 
-![QQ](https://github.com/user-attachments/assets/6835f5ff-dc42-446f-90aa-cb3a010833f6)
 
 From graphs above, we can see that participation per campaign takes interest in some demographic class (right top graph).
 
 Campaign was more focused on:
 
-Generation: Gen X
-Education: PhD
-Marital: Married
-Economic Class: Lower Middle Class
-Family: Not Family
+* Generation: Gen X
+* Education: PhD
+* Marital: Married
+* Economic Class: Lower Middle Class
+* Family: Not Family
+
 We can also see which class has higher population per demography as listed below.
 
 Highest Population:
 
-Millennials (89.2%)
-Graduation (50.4%)
-Married (38.6%) and Together (25.9%) = (64.5%)
-Lower Middle Class (74.9%)
+* Millennials (89.2%)
+* Graduation (50.4%)
+* Married (38.6%) and Together (25.9%) = (64.5%)
+* Lower Middle Class (74.9%)
 Family (71.6%)
 
 ## DEMOGRAPHY CORRELATION TEST
@@ -93,6 +93,8 @@ We should take a look at other matrix to help enhance the campaign, we can analy
 From graphs above we can conclude that almost everyone has ever bought in discount but the rate of purchase is quite small, only 1 out of 6 purchases. Discount is a good tool to attract participants but should meet needs of top demography.
 ## CHANNEL OF PURCHASE
 From graphs above we can conclude that almost everyone has bought from Store and Web. All favored Store as main channel of purchase. Store is the best channel of purchase followed by Web.
+![QQ](https://github.com/user-attachments/assets/6835f5ff-dc42-446f-90aa-cb3a010833f6)
+
 ## RFM ANALTSIS FOR CUSTOMER SEGMENTATION
 ##### What is RFM? and Why it is used for?
 
