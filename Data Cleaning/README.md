@@ -1610,35 +1610,3 @@ Strategy:
 * Closely monitor these customers and increase their satisfaction through personalized phone calls.
 * Offer promotions such as free shipping to increase the average spend per order.
 * With the right support, these customers could become loyal customers.
-
-
-# CONCLUSION AND RECOMMENDATION
-We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
-
-By making audience priority:
-
-* Lower Middle Class (75%)
-* Family (72%)
-* Couple — Married (39%) and Together (26%) = (65%)
-* Graduation (50%)
-* Gen X (48%)
-  
-Integrates discount to campaign with items that meet the needs of top demography.
-
-Boost campaign in Store. If budget is good, also boost on Web.
-
-## Recommendation
-
-### Target Audience
-My main audience should be the **Lower Middle Class** with families (kids/teens at home). We can also include other demographic types like couples (Married and Together), Graduates, and Millennials to enhance our campaign.
-
-### Discount Strategy
-The discounted items should meet the needs of our primary audience, especially the **Lower Middle Class** with families (kids/teens at home).
-
-### Channel Strategy
-We should boost our campaign primarily in-store, then consider boosting it on our website as our secondary channel of purchase if budget permits.
-
-### RFM-Based Actions
-* At Risk: Offer personalized discounts and send surveys to understand and resolve potential dissatisfaction. Focus on re-engagement to prevent customer loss.
-* Need Attention: Send targeted offers on fast-moving products and timely promotions to encourage quicker repeat purchases.
-* Potential Loyalists: Strengthen their connection with exclusive offers (e.g., free shipping) and personalized care to convert them into loyal customers.
