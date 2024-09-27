@@ -35,8 +35,6 @@ I evaluate how the participation in each campaign and overall. I calculate:
 * Channel of purchase per demography and overall
 ## 2. Using RFM for Customer Segmentation
 
-# FEATURE ENGINEERING
-# MODELING
 # CONCLUSION AND RECOMMENDATIONS
 We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
 
