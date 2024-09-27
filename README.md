@@ -105,6 +105,7 @@ Based on the demographic analysis (proportion and rate of participation), we kno
 - **Marital Status**: Single
 - **Economic Class**: Lower Middle Class
 - **Family Status**: Not Family
+  
 Discount Analysis
 * A discount might be needed because almost everyone has ever bought at a discount. However, the purchase ratio in total is small, at **16%**. This could be because the discounted items didn't match the needs of the consumers, only attracting the Working Class and Family, while the Working Class is not the highest population among other Economic Classes.
 
