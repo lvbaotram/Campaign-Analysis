@@ -1162,6 +1162,17 @@ This is the version after data cleansing:
 <p>2240 rows × 31 columns</p>
 
 # DATA ANALYSIS: DEMOGRAPHY
+#### Which campaign is successfull the most?
+![image](https://github.com/user-attachments/assets/99ec042b-9370-4784-96f0-6d07294d3e4c)
+
+If we look closely in participated customers number, there's a hope that this campaigns could work better next time. In the **3rd** campaigns, we see a significance rise in participants, doubles the last and overall past campaigns participants.
+
+To best formulate next campaign, we should design the campaign carefully based our evaluation of past campaigns.
+
+We should see what might happened in last campaign to formulate next campaigns. And also, looks at **2nd** and **5th** campaigns that failed to gather participants, so we're not repeating same mistake in next campaigns.
+
+Based on our given data, we can see the demographics for potential target audience, so many will participate in next campaign.
+
 Next, let’s take a look at each demographical analysis. Let’s take a look into it by analyzing proportion of population per demography, proportion per demography per campaign, participation rates per demography, and interest of participation per campaign.
 
 ![q2](https://github.com/user-attachments/assets/9edb64dd-0892-43f1-bc03-8dfef31c3a1d)
@@ -1243,20 +1254,391 @@ We should take a look at other matrix to help enhance the campaign, we can analy
 From graphs above we can conclude that almost everyone has ever bought in discount but the rate of purchase is quite small, only 1 out of 6 purchases. Discount is a good tool to attract participants but should meet needs of top demography.
 ## CHANNEL OF PURCHASE
 From graphs above we can conclude that almost everyone has bought from Store and Web. All favored Store as main channel of purchase. Store is the best channel of purchase followed by Web.
+## RFM ANALTSIS FOR CUSTOMER SEGMENTATION
+##### What is RFM? and Why it is used for?
+
+RFM stands for Recency, Frequency, and Monetary value, which is a popular method used in marketing and customer relationship management (CRM) to analyze and segment customers based on their purchasing behavior.
+![RFM](https://github.com/user-attachments/assets/0c22093f-cc9f-4f00-b8fe-2ec85f6f3974)
+
+**The RFM model evaluates customers based on three key metrics:**
+
+*Recency:* How recently a customer has made a purchase
+
+*Frequency:* How frequently a customer makes purchases
+
+*Monetary Value:* How much a customer spends on purchases
+
+* RFM analysis assigns each customer a score for each of these metrics, which are then used to segment customers into groups based on their overall score.
+* This segmentation helps businesses identify which customers are most valuable and should receive priority attention, and which customers are less valuable and may require less attention or targeted marketing efforts.
+##### By using RFM Analysis:
+* Businesses can develop targeted marketing strategies for each customer segment.
+* Improve customer retention.
+* Increase overall revenue by focusing on their most valuable customers.
+Now let's us use RFM for Campaign Marketing dataset.
+1. Calculating RFM Metrics
+```
+# Recency
+rfm['Recency'] = df['Recency']
+# Frequency
+rfm['Frequency'] = df['Num_Deals_Purchases'] + df['Num_Catalog_Purchases'] + df['Num_Store_Purchases'] + df['Num_Web_Purchases']
+# Monetary
+rfm['Monetary'] = df['Liquor'] + df['Vegetables'] + df['Pork'] + df['Seafood'] + df['Candy'] + df['Jewellery']
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Recency</th>
+      <th>Frequency</th>
+      <th>Monetary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>37.0</td>
+      <td>31.0</td>
+      <td>1105.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>92.0</td>
+      <td>21.0</td>
+      <td>738.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>65.0</td>
+      <td>27.0</td>
+      <td>1318.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>12.0</td>
+      <td>7.0</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>55.0</td>
+      <td>33.0</td>
+      <td>1665.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2231</th>
+      <td>51.0</td>
+      <td>7.0</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>2232</th>
+      <td>74.0</td>
+      <td>10.0</td>
+      <td>140.0</td>
+    </tr>
+    <tr>
+      <th>2233</th>
+      <td>30.0</td>
+      <td>20.0</td>
+      <td>764.0</td>
+    </tr>
+    <tr>
+      <th>2234</th>
+      <td>94.0</td>
+      <td>29.0</td>
+      <td>1112.0</td>
+    </tr>
+    <tr>
+      <th>2235</th>
+      <td>26.0</td>
+      <td>20.0</td>
+      <td>399.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2236 rows × 3 columns</p>
+
+2. Calculating RFM Scores
+```
+rfm_df = rfm.copy()
+rfm_df.loc[:, 'recency_score'] = pd.qcut(rfm_df['Recency'], 5, labels=[5, 4, 3, 2, 1])
+rfm_df.loc[:, 'frequency_score'] = pd.qcut(rfm_df['Frequency'], 5, labels=[1, 2, 3, 4, 5])
+rfm_df.loc[:, 'monetary_score'] = pd.qcut(rfm_df['Monetary'], 5, labels=[1, 2, 3, 4, 5])
+rfm_df.loc[:, 'RFM_SCORE'] = (rfm_df['recency_score'].astype(str) + rfm_df['frequency_score'].astype(str))
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Recency</th>
+      <th>Frequency</th>
+      <th>Monetary</th>
+      <th>recency_score</th>
+      <th>frequency_score</th>
+      <th>monetary_score</th>
+      <th>RFM_SCORE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>37.0</td>
+      <td>31.0</td>
+      <td>1105.0</td>
+      <td>4</td>
+      <td>5</td>
+      <td>4</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>92.0</td>
+      <td>21.0</td>
+      <td>738.0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>4</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>65.0</td>
+      <td>27.0</td>
+      <td>1318.0</td>
+      <td>2</td>
+      <td>5</td>
+      <td>5</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>12.0</td>
+      <td>7.0</td>
+      <td>67.0</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>55.0</td>
+      <td>33.0</td>
+      <td>1665.0</td>
+      <td>3</td>
+      <td>5</td>
+      <td>5</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+
+3. Creating & Analysing RFM Segments
+```
+# Clusters by RFM Score
+seg_map = {
+    r'[1-2][1-2]': 'hibernating',
+    r'[1-2][3-4]': 'at_Risk',
+    r'[1-2]5': 'cant_loose',
+    r'3[1-2]': 'about_to_sleep',
+    r'33': 'need_attention',
+    r'[3-4][4-5]': 'loyal_customers',
+    r'41': 'promising',
+    r'51': 'new_customers',
+    r'[4-5][2-3]': 'potential_loyalists',
+    r'5[4-5]': 'champions'
+}
+# Performing calculations
+rfm_df.loc[:,'segment'] = rfm_df['RFM_SCORE'].replace(seg_map, regex=True)
+rfm_df[['segment', 'Recency', 'Frequency', 'Monetary']].groupby('segment').agg(['mean', 'count'])
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2" halign="left">Recency</th>
+      <th colspan="2" halign="left">Frequency</th>
+      <th colspan="2" halign="left">Monetary</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>mean</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>about_to_sleep</th>
+      <td>49.377049</td>
+      <td>183</td>
+      <td>6.852459</td>
+      <td>183</td>
+      <td>80.338798</td>
+      <td>183</td>
+    </tr>
+    <tr>
+      <th>at_Risk</th>
+      <td>78.586842</td>
+      <td>380</td>
+      <td>17.465789</td>
+      <td>380</td>
+      <td>880.692105</td>
+      <td>380</td>
+    </tr>
+    <tr>
+      <th>cant_loose</th>
+      <td>80.062893</td>
+      <td>159</td>
+      <td>25.981132</td>
+      <td>159</td>
+      <td>1208.918239</td>
+      <td>159</td>
+    </tr>
+    <tr>
+      <th>champions</th>
+      <td>9.267857</td>
+      <td>168</td>
+      <td>22.952381</td>
+      <td>168</td>
+      <td>1072.773810</td>
+      <td>168</td>
+    </tr>
+    <tr>
+      <th>hibernating</th>
+      <td>80.162319</td>
+      <td>345</td>
+      <td>7.031884</td>
+      <td>345</td>
+      <td>86.857971</td>
+      <td>345</td>
+    </tr>
+    <tr>
+      <th>loyal_customers</th>
+      <td>39.849432</td>
+      <td>352</td>
+      <td>23.181818</td>
+      <td>352</td>
+      <td>1118.639205</td>
+      <td>352</td>
+    </tr>
+    <tr>
+      <th>need_attention</th>
+      <td>50.141176</td>
+      <td>85</td>
+      <td>14.929412</td>
+      <td>85</td>
+      <td>654.764706</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>new_customers</th>
+      <td>9.491525</td>
+      <td>118</td>
+      <td>5.381356</td>
+      <td>118</td>
+      <td>50.703390</td>
+      <td>118</td>
+    </tr>
+    <tr>
+      <th>potential_loyalists</th>
+      <td>19.014837</td>
+      <td>337</td>
+      <td>12.646884</td>
+      <td>337</td>
+      <td>441.142433</td>
+      <td>337</td>
+    </tr>
+    <tr>
+      <th>promising</th>
+      <td>29.669725</td>
+      <td>109</td>
+      <td>5.357798</td>
+      <td>109</td>
+      <td>42.422018</td>
+      <td>109</td>
+    </tr>
+  </tbody>
+</table>
+
+![image](https://github.com/user-attachments/assets/21790114-0932-4ae9-a371-f908bbb46901)
+
+![newplot](https://github.com/user-attachments/assets/73bfc8e3-a956-4529-8b14-0e241d95d875)
+
+#### At Risk
+
+This group made their last purchase an average of 78.59 days ago. The group has an average shopping frequency of 17.47 times, and the average total spend is 880.69 units. The time since their last purchase is quite long, so these customers may be at risk of being lost.
+
+Strategy:
+
+* Investigate why these customers have not shopped in a long time, possibly due to dissatisfaction.
+* Send a survey via email to check their shopping experience.
+* If there is no dissatisfaction, send reminders and offer discount codes to encourage them to shop again.
+#### Need Attention
+
+This group made their last purchase an average of 50.14 days ago, with an average shopping frequency of 14.93 times, and the average spend is 654.76 units.
+
+Strategy:
+
+* Focus on offering products that have faster consumption rates, based on what these customers usually buy.
+* Provide special promotions or discounts to encourage them to come back sooner.
+* This approach could help shorten the time between purchases and increase shopping frequency.
+#### Potential Loyalists
+
+This group made their last purchase an average of 19.01 days ago, with an average shopping frequency of 12.65 times, and the average spend is 441.14 units.
+
+Strategy:
+
+* Closely monitor these customers and increase their satisfaction through personalized phone calls.
+* Offer promotions such as free shipping to increase the average spend per order.
+* With the right support, these customers could become loyal customers.
 
 
 # CONCLUSION AND RECOMMENDATION
-We already know which demography classes is the best for audience targeting and how the last 6 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
-
-Aim for higher population. (based on correlation test).
+We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
 
 By making audience priority:
 
-Lower Middle Class (75%)
-Family (72%)
-Couple — Married (39%) and Together (26%) = (65%)
-Graduation (50%)
-Gen X (48%)
+* Lower Middle Class (75%)
+* Family (72%)
+* Couple — Married (39%) and Together (26%) = (65%)
+* Graduation (50%)
+* Gen X (48%)
+  
 Integrates discount to campaign with items that meet the needs of top demography.
 
 Boost campaign in Store. If budget is good, also boost on Web.
+
+## Recommendation
+
+### Target Audience
+My main audience should be the **Lower Middle Class** with families (kids/teens at home). We can also include other demographic types like couples (Married and Together), Graduates, and Millennials to enhance our campaign.
+
+### Discount Strategy
+The discounted items should meet the needs of our primary audience, especially the **Lower Middle Class** with families (kids/teens at home).
+
+### Channel Strategy
+We should boost our campaign primarily in-store, then consider boosting it on our website as our secondary channel of purchase if budget permits.
+
+### RFM-Based Actions
+* At Risk: Offer personalized discounts and send surveys to understand and resolve potential dissatisfaction. Focus on re-engagement to prevent customer loss.
+* Need Attention: Send targeted offers on fast-moving products and timely promotions to encourage quicker repeat purchases.
+* Potential Loyalists: Strengthen their connection with exclusive offers (e.g., free shipping) and personalized care to convert them into loyal customers.
