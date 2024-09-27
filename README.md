@@ -59,7 +59,14 @@ numStorePurchase: Number of purchases made directly in stores
 numWebVisitsMonth: Number of visits to the company’s website in the last month
 
 # DATA CLEANING 
+Here are what i do in data cleansing:
 
+* Renaming the columns (for easier understanding and navigation)
+* Change data format to what it's supposed to.
+* Check and fill missing values.
+* Add new columns for data demographic grouping
+* Add new columns for sum values
+* Drop unnecessary columns
 # EXPLORATORY DATA ANALYSIS
 ## 1. Demographic Analysis
 I evaluate how the participation in each campaign and overall. I calculate:
