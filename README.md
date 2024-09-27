@@ -111,18 +111,11 @@ Integrates discount to campaign with items that meet the needs of top demography
 Boost campaign in Store. If budget is good, also boost on Web.
 
 ## Recommendation
-
-### Target Audience
-My main audience should be the **Lower Middle Class** with families (kids/teens at home). We can also include other demographic types like couples (Married and Together), Graduates, and Millennials to enhance our campaign.
-
-### Discount Strategy
-The discounted items should meet the needs of our primary audience, especially the **Lower Middle Class** with families (kids/teens at home).
-
-### Channel Strategy
-We should boost our campaign primarily in-store, then consider boosting it on our website as our secondary channel of purchase if budget permits.
-
-### RFM-Based Actions
-* At Risk: Offer personalized discounts and send surveys to understand and resolve potential dissatisfaction. Focus on re-engagement to prevent customer loss.
-* Need Attention: Send targeted offers on fast-moving products and timely promotions to encourage quicker repeat purchases.
-* Potential Loyalists: Strengthen their connection with exclusive offers (e.g., free shipping) and personalized care to convert them into loyal customers.
+* My main audience should be the **Lower Middle Class** with families (kids/teens at home). We can also include other demographic types like couples (Married and Together), Graduates, and Millennials to enhance our campaign.
+* The discounted items should meet the needs of our primary audience, especially the **Lower Middle Class** with families (kids/teens at home).
+* We should boost our campaign primarily in-store, then consider boosting it on our website as our secondary channel of purchase if budget permits.
+* RFM-Based Actions
+  * At Risk: Offer personalized discounts and send surveys to understand and resolve potential dissatisfaction. Focus on re-engagement to prevent customer loss.
+  * Need Attention: Send targeted offers on fast-moving products and timely promotions to encourage quicker repeat purchases.
+  * Potential Loyalists: Strengthen their connection with exclusive offers (e.g., free shipping) and personalized care to convert them into loyal customers.
 
