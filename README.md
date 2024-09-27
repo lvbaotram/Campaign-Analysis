@@ -1579,7 +1579,7 @@ rfm_df[['segment', 'Recency', 'Frequency', 'Monetary']].groupby('segment').agg([
   </tbody>
 </table>
 
-![image](https://github.com/user-attachments/assets/21790114-0932-4ae9-a371-f908bbb46901)
+![image](https://github.com/user-attachments/assets/67b76ff4-0d2e-474b-b1da-3612bbea5906)
 
 ![newplot](https://github.com/user-attachments/assets/73bfc8e3-a956-4529-8b14-0e241d95d875)
 
