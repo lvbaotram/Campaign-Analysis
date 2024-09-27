@@ -22,7 +22,44 @@ To best formulate next campaign, we should should evaluate our campaign performa
 4. If needed, which products that should be discounted?
 5. What channel of purchase should we integrate more in the campaign?
 # ABOUT DATASET
-# DATA CLEANING AND PREPROCESSING
+After renaming the columns, here's a dictionary for you to take notes: PEOPLE
+
+id: Customer's unique identifier
+birthYear: Customer's birth year
+education: Customer's education level
+statusMarital: Customer's marital status
+yearlyHouseIncome: Customer's yearly household income
+inHomeKid: Number of children in customer's household
+inHomeTeen: Number of teenagers in customer's household
+customerJoinDate: Date of customer's enrollment with the company
+daysLastPurchase: Number of days since customer's last purchase
+isComplain2Y: 1 if the customer complained in the last 2 years, 0 otherwise
+PRODUCT
+
+amountWines2Y: Amount spent on wine in last 2 years
+amountFruits2Y: Amount spent on fruits in last 2 years
+amountMeatProds2Y: Amount spent on meat in last 2 years
+amountFishProds2Y: Amount spent on fish in last 2 years
+amountSweetProds2Y: Amount spent on sweets in last 2 years
+amountGoldProds2Y: Amount spent on gold in last 2 years
+PROMOTION
+
+discPurchase: Number of purchases made with a discount
+isAcceptedCmp1: 1 if the customer accepted the offer in the 1st campaign, 0 otherwise
+isAcceptedCmp2: 1 if the customer accepted the offer in the 2nd campaign, 0 otherwise
+isAcceptedCmp3: 1 if the customer accepted the offer in the 3rd campaign, 0 otherwise
+isAcceptedCmp4: 1 if the customer accepted the offer in the 4th campaign, 0 otherwise
+isAcceptedCmp5: 1 if the customer accepted the offer in the 5th campaign, 0 otherwise
+isAcceptedCmpLast: 1 if the customer accepted the offer in the last campaign, 0 otherwise
+PLACE
+
+numWebPurchase: Number of purchases made through the company’s website
+numCatalogPurchase: Number of purchases made using a catalog
+numStorePurchase: Number of purchases made directly in stores
+numWebVisitsMonth: Number of visits to the company’s website in the last month
+
+# DATA CLEANING 
+
 # EXPLORATORY DATA ANALYSIS
 ## 1. Demographic Analysis
 I evaluate how the participation in each campaign and overall. I calculate:
@@ -34,6 +71,9 @@ I evaluate how the participation in each campaign and overall. I calculate:
 * Discount analysis per demography and overall
 * Channel of purchase per demography and overall
 ## 2. Using RFM for Customer Segmentation
+![QQQ](https://github.com/user-attachments/assets/c36cd63a-9b8b-4529-bfb5-957efc25894d)
+
+## 3. 
 
 # CONCLUSION AND RECOMMENDATIONS
 We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
