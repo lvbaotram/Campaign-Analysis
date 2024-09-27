@@ -96,6 +96,25 @@ This Power BI dashboard provides a comprehensive overview of customer demographi
   
 For more details, please visit [here](https://app.powerbi.com/groups/me/reports/7559dfbe-b5d2-4a5c-a7fd-41b9849bf907/e5cfc452f947b6acdfdc?experience=power-bi).
 # CONCLUSION AND RECOMMENDATIONS
+## Evaluation
+
+Based on the demographic analysis (proportion and rate of participation), we know that the past campaigns focused more on:
+
+- **Generation**: GenX
+- **Education**: PhD
+- **Marital Status**: Single
+- **Economic Class**: Lower Middle Class
+- **Family Status**: Not Family
+Discount Analysis
+* A discount might be needed because almost everyone has ever bought at a discount. However, the purchase ratio in total is small, at **16%**. This could be because the discounted items didn't match the needs of the consumers, only attracting the Working Class and Family, while the Working Class is not the highest population among other Economic Classes.
+
+Channel of Purchase Analysis
+* Despite demographic types, the most favored channel of purchase is **Store**, followed by **Web**.
+
+RFM Analysis Insights
+* **High-Value Segments**: Segments like `loyal_customers` and `potential_loyalists` are valuable for growth, while `champions` represent the highest value despite their smaller numbers.
+* **At-Risk and Hibernating Segments**: These groups are significant in size, highlighting a need for targeted re-engagement strategies to reduce churn.
+## Conclusion
 We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
 
 By making audience priority:
