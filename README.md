@@ -59,14 +59,21 @@ numStorePurchase: Number of purchases made directly in stores
 numWebVisitsMonth: Number of visits to the company’s website in the last month
 
 # DATA CLEANING 
-Here are what i do in data cleansing:
-
-* Renaming the columns (for easier understanding and navigation)
-* Change data format to what it's supposed to.
-* Check and fill missing values.
-* Add new columns for data demographic grouping
-* Add new columns for sum values
-* Drop unnecessary columns
+Here are what I do in data cleaning:
+### 1. Removed Duplicates
+* Grouped rows by ID and filled missing values using ffill() and bfill().
+* Removed duplicate rows, reducing from **3169 rows** to **2240 rows**.
+### 2. Handled Missing Values
+* Phone & Phone_Number: Merged columns.
+* Month/Year Register: Filled using Registration_Time column.
+* Payment Method: Filled based on purchase behavior.
+* Income: Removed rows with missing values (1% of total).
+### 3. Checked Logical Consistency
+* Academic_Level: Merged "Master" and "2n Cycle".
+* Living_With: Split into Status and Children.
+* Invalid Promotion Data: Removed columns with incorrect values.
+### 4. Removed Outliers
+* Applied the **3-sigma** method to detect and remove outliers from numerical columns like Income and Vegetables.
 # EXPLORATORY DATA ANALYSIS
 ## 1. Demographic Analysis
 I evaluate how the participation in each campaign and overall. I calculate:
@@ -80,7 +87,13 @@ I evaluate how the participation in each campaign and overall. I calculate:
 ## 2. Using RFM for Customer Segmentation
 ![QQQ](https://github.com/user-attachments/assets/c36cd63a-9b8b-4529-bfb5-957efc25894d)
 
-## 3. 
+## 3. Demographic Analysis Dashboard - PW Mart
+This Power BI dashboard provides a comprehensive overview of customer demographic data for PW Mart. It visualizes key metrics and insights to help the business make data-driven decisions. 
+### Goals
+* Assist the management team in making informed decisions based on customer demographic data.
+* Identify customer shopping trends across different demographic segments (generation, education level, payment method, etc.).
+* Enhance marketing strategies and business development by understanding customer behavior.
+  ![image](https://github.com/user-attachments/assets/734b3e05-d0d2-4c89-bb44-822137623607)
 
 # CONCLUSION AND RECOMMENDATIONS
 We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
