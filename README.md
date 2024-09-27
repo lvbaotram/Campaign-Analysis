@@ -94,7 +94,7 @@ This Power BI dashboard provides a comprehensive overview of customer demographi
 * Enhance marketing strategies and business development by understanding customer behavior.
   ![image](https://github.com/user-attachments/assets/734b3e05-d0d2-4c89-bb44-822137623607)
   
-For more details, please visit [here](https://example.com/details).
+For more details, please visit [here](https://app.powerbi.com/groups/me/reports/7559dfbe-b5d2-4a5c-a7fd-41b9849bf907/e5cfc452f947b6acdfdc?experience=power-bi).
 # CONCLUSION AND RECOMMENDATIONS
 We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
 
