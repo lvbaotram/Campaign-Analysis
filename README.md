@@ -70,7 +70,8 @@ Here are what I do in data cleaning:
 * Invalid Promotion Data: Removed columns with incorrect values.
 ### 4. Removed Outliers
 * Applied the **3-sigma** method to detect and remove outliers from numerical columns like Income and Vegetables.
-For more details, please visit [here]([https://github.com/lvbaotram/Campaign-Analysis/tree/main/Data%20Cleaning])).
+
+For more details, please visit [here](https://github.com/lvbaotram/Campaign-Analysis/tree/main/Data%20Cleaning).
 # EXPLORATORY DATA ANALYSIS
 ## 1. Demographic Analysis
 I evaluate how the participation in each campaign and overall. I calculate:
@@ -83,7 +84,8 @@ I evaluate how the participation in each campaign and overall. I calculate:
 * Channel of purchase per demography and overall
 ## 2. Using RFM for Customer Segmentation
 ![QQQ](https://github.com/user-attachments/assets/c36cd63a-9b8b-4529-bfb5-957efc25894d)
-For more details, please visit [here]([https://github.com/lvbaotram/Campaign-Analysis/tree/main/Exploratory%20Data%20Analysis])).
+
+For more details, please visit [here](https://github.com/lvbaotram/Campaign-Analysis/tree/main/Exploratory%20Data%20Analysis).
 ## 3. Demographic Analysis Dashboard - PW Mart
 This Power BI dashboard provides a comprehensive overview of customer demographic data for PW Mart. It visualizes key metrics and insights to help the business make data-driven decisions. 
 ### Goals
@@ -91,6 +93,7 @@ This Power BI dashboard provides a comprehensive overview of customer demographi
 * Identify customer shopping trends across different demographic segments (generation, education level, payment method, etc.).
 * Enhance marketing strategies and business development by understanding customer behavior.
   ![image](https://github.com/user-attachments/assets/734b3e05-d0d2-4c89-bb44-822137623607)
+  
 For more details, please visit [here](https://example.com/details).
 # CONCLUSION AND RECOMMENDATIONS
 We already know which demography classes is the best for audience targeting and how the last 5 campaigns went. We can conclude and recommend the PW Mart Marketing / Campaign Team to:
